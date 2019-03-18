@@ -34,7 +34,7 @@ react-native run-ios
 
 在项目app.js 文件中修改一些东西，写入hello  world ;
 
-现在你已经开始了react-native的开发，其中会涉及很多其他技术比如redux react-native-navigation 等等技术，但是这些都是技术细节，并不是react-native的开发主干，在接触一门新技术时，能对该技术从开始到一个完成产品有个全流程感性的认识是非常重要，这将是你未来开发的灯塔，有了它，你再开发过程中便不会迷失方向；
+***现在你已经开始了react-native的开发，其中会涉及很多其他技术比如redux react-native-navigation 等等技术，但是这些都是技术细节，并不是react-native的开发主干，在接触一门新技术时，能对该技术从开始到一个完成产品有个全流程感性的认识是非常重要，这将是你未来开发的灯塔，有了它，你再开发过程中便不会迷失方向；***
 
 接下来我们需要对这个demo进行编译，感受一下，react-native如何做到跨平台编译项目的过程
 
