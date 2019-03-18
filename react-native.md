@@ -7,12 +7,12 @@
 ```
 等待安装完成
 
-## 安装Xcode、Android-studio  
+### 安装Xcode、Android-studio  
   Xcode 可以在Mac的AppStore中搜索安装
 
   Android-studio的程序包可以在网上搜索到，安装Android-studio时需要注意的是在安装到需要设置proxy时点击取消键，*之前由于大陆防火墙的原因，Android-studio需要设置代理才能安装，现在无需设置代理了*。
 
-### 正式开始
+## 正式开始
 
 在你选择的创建项目路径下，命令行输入
 
