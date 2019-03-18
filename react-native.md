@@ -67,6 +67,7 @@ npm run bundle-ios
 执行该命令
 
 然后使用Xcode 打开 项目下的ios目录  把之前生成bundle文件夹拖拽到Xcode中和项目同名的文件夹中，注意要使用Create folder references添加文件夹
+
 ![添加bundle文件夹](https://user-gold-cdn.xitu.io/2018/7/17/164a60070fd22334?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 ### 设置 AppDelegate.m 文件
