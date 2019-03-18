@@ -1,4 +1,4 @@
-### react-native
+# react-native
 
 #### 准备工作
 
@@ -38,7 +38,7 @@ react-native run-ios
 
 接下来我们需要对这个demo进行编译，感受一下，react-native如何做到跨平台编译项目的过程
 
-# ios编译
+## ios编译
 
 
 ```
@@ -93,7 +93,7 @@ NSURL *jsCodeLocation;
 当然这里需要一个每年$99ios开发者账户，由于我没有，所以这一步暂停。
 
 
-# Android 编译
+## Android 编译
 
 Android 要求所有应用都有一个数字签名才会被允许安装在用户手机上，所以在把应用发布到类似Google Play store这样的应用市场之前，你需要先生成一个签名的 APK 包。Android 开发者官网上的如何给你的应用签名文档描述了签名的细节。本指南旨在提供一个简化的签名和打包 js 的操作步骤，不会涉及太多理论。
 
