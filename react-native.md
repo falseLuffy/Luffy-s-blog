@@ -84,6 +84,7 @@ NSURL *jsCodeLocation;
 ```
 
 修改运行配置，将当前的模拟器模式修改为ios device模式，
+
 ![修改运行配置](http://www.hangge.com/blog_uploads/201503/2015030910075011157.png)
 
 现在你就可以点击archive发行到appstore了，
