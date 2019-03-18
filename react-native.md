@@ -91,7 +91,7 @@ NSURL *jsCodeLocation;
 现在你就可以点击archive发行到appstore了，
 ![archive](https://user-gold-cdn.xitu.io/2018/7/17/164a603b4c7a6ffe?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-当然这里需要一个每年$99ios开发者账户，由于我没有，所以这一步暂停。
+当然这里需要一个每年$99 IOS开发者账户，由于我没有，所以这一步暂停。
 
 
 ## Android 编译
