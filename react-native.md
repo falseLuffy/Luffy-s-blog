@@ -34,12 +34,28 @@ react-native run-ios
 
 在项目app.js 文件中修改一些东西，写入hello  world ;
 
+### Android 模拟器运行
+
+如果你想在Android上模拟运行react-native项目，可以使用Android studio的Android模拟器，具体使用方法如下。
+运行
+```
+    npm start 
+```
+ps:执行上条命令之之前先把react-native run-ios暂停，因为这两条命令启动的是同一个端口，两条命令同时执行会发生端口冲突
+
+然后使用Android Studio 打开项目向android文件夹，等待一段时间(Android打开项目会首先编译一下).点击运行按钮，这样项目就可以在安卓模拟骑上运行了。
+
+安卓模拟器的菜单快捷键和ios不同
+ios: command + d
+安卓: command + m
+
+其他的调试方法基本一样。
+
 ***现在你已经开始了react-native的开发，其中会涉及很多其他技术比如redux react-native-navigation 等等技术，但是这些都是技术细节，并不是react-native的开发主干，在接触一门新技术时，能对该技术从开始到一个完成产品有个全流程感性的认识是非常重要，这将是你未来开发的灯塔，有了它，你再开发过程中便不会迷失方向；***
 
 接下来我们需要对这个demo进行编译，感受一下，react-native如何做到跨平台编译项目的过程
 
 ## ios编译
-
 
 ```
 cd ./ios && mkdir bundle
