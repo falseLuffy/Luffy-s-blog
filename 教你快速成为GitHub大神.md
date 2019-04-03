@@ -29,7 +29,20 @@
 ```
 代码中-date就是git指定commit时间的参数，这个参数接受一个如上的时间格式
 
-日期格式中月份要是用缩写,缩写对照表如下
+日期格式中星期和月份要是用缩写,
+
+星期缩写对照表如下  
+```
+Sunday Sun.
+Monday Mon.
+Tuesday  Tues.
+Wednesday Wed.
+Thursday Thurs.
+Friday Fri.
+Saturday Sat.
+```
+
+月份缩写对照表如下
 
 ```
 January, Jan.
