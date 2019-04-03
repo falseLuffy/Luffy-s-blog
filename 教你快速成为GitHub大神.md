@@ -25,7 +25,7 @@
 那我们能否修改计算机系统时间去生成一个自己期望时间的commit。如果你这样做就有些麻烦了。其实git在commit时本身就提供了一个参数，让你可以指定commit时间。
 
 ```
-  git commit -am "提交" --date="月 日 时间 年 +0800" 
+  git commit -am "提交" --date="星期 月 日 时间 年 +0800" 
 ```
 代码中-date就是git指定commit时间的参数，这个参数接受一个如上的时间格式
 
@@ -49,7 +49,7 @@ December, Dec.
 这样我们就能轻松的指定commit时间，比如现在是2019年，你可以指定一个2015年的commit
 
 ```
- git commit -am "提交" --date="May 7 9:05:20 2015 +0800" 
+ git commit -am "提交" --date=" Tue May 7 9:05:20 2015 +0800" 
 ```
 
 然后将你的commit push到GitHub中，你就可以看到，在2015年5月7日那天有一个commit记录了。
