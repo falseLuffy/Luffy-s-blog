@@ -2,7 +2,7 @@
 
 ![](https://ws2.sinaimg.cn/large/006tNc79ly1g24i4d7eetj30q40wkdgu.jpg)
 
-可以看到上图中的图片比较小，希望能放大，那打开一个新页面时最近单的方法了。
+可以看到上图中的图片比较小，希望能放大，那打开一个新页面是最简单的方法了。
 
 那我直接给图片包裹一个a标签，target设置为_blank，这样很简单嘛！
 
@@ -23,7 +23,7 @@ what！！！  Not allowed to navigate top frame to data URL
 
 ```
 win = window.open()
-win.write('<iframe src="data URL"></iframe>')
+win.document.write('<iframe src="data URL"></iframe>')
 ```
 
 这样就能搞定了。好的收工。
