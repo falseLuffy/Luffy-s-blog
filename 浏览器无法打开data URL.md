@@ -1,0 +1,1 @@
+[What does the "Not allowed to navigate top frame to data URL:" JavaScript exception means in Google Chrome](https://ourcodeworld.com/articles/read/682/what-does-the-not-allowed-to-navigate-top-frame-to-data-url-javascript-exception-means-in-google-chrome)
