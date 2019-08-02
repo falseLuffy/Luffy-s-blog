@@ -1,0 +1,1 @@
+[nginx socket 代理配置](https://blog.csdn.net/weixin_37264997/article/details/80341911)
