@@ -33,6 +33,16 @@ return
 
 #IfWinActive
 
+;非Google Chrome下
+;按下win + q等于按下alt + F4
+#IfWinNotActive, ahk_class Chrome_WidgetWin_1
+^q::
+    send, {alt down}{f4}
+    sleep 50
+    send, {alt up}
+return
+#IfWinNotActive
+
 ;如果在git bash窗口下，
 #IfWinActive, ahk_class mintty
 
@@ -42,6 +52,13 @@ return
 ^c::^Ins
 
 ^v::^+ins
+
+;新建窗口
+^t::
+    send, {alt down}{f2}
+    sleep 50
+    send, {alt up}
+return
 
 ;终止程序键
 !c::^c
