@@ -1,3 +1,11 @@
+; --------------------------------------------------------------
+; NOTES
+; --------------------------------------------------------------
+; ! = ALT
+; ^ = CTRL
+; + = SHIFT
+; # = WIN
+
 ; Remap Ctrl + Tab to Alt + Tab. And
 ; Remap Ctrl + Shift + Tab to Alt +Shift + Tab.
 LCtrl & Tab:: 
@@ -17,20 +25,25 @@ return
 
 #If
 
-;非Google Chrome下
-;按下win + w等于按下alt + F4
-#IfWinNotActive, ahk_class Chrome_WidgetWin_1
-^w::
-    send, {alt down}{f4}
-    sleep 50
-    send, {alt up}
-return
-#IfWinNotActive
-
 ; Google Chrome
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 
 ; Show Web Developer Tools with cmd + alt + i
 #!i::Send {F12}
+
+#IfWinActive
+
+;如果在git bash窗口下，
+#IfWinActive, ahk_class mintty
+
+;重定义复制、黏贴快捷键
+^c::return
+
+^c::^Ins
+
+^v::^+ins
+
+;终止程序键
+!c::^c
 
 #IfWinActive
