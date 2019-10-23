@@ -20,6 +20,11 @@ whistle是一个款node编写的服务代理软件，可以非常便利的代理
 
 ## windows系统下证书安装
  windows系统的证书安装较为简单，双击证书文件按照指示安装就可以，安装成功需要重启系统
+![](https://i.loli.net/2019/10/23/jtn7BaWGsJr13cy.png)
+
+![](https://i.loli.net/2019/10/23/ULseTSXoC346bwO.png)
+
+接下来一直点下一步直到完成
 
 ## MacOS 系统下证书的安装
 下载完成后，点击下载文件，将文件添加到“钥匙串”中，
