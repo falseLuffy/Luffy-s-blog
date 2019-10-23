@@ -42,6 +42,6 @@ whistle是一个款node编写的服务代理软件，可以非常便利的代理
 
 将如下选项设置为信任，然后重启系统，便配置完成，
 
-然后再配置文件中写下: https://xxx.com  http://sss.com
+然后在配置文件中写下: https://xxx.com  http://sss.com
 
 最后就是愉快的开发时间了。
