@@ -43,7 +43,7 @@ react-native run-ios
 ```
 ps:执行上条命令之之前先把react-native run-ios暂停，因为这两条命令启动的是同一个端口，两条命令同时执行会发生端口冲突
 
-然后使用Android Studio 打开项目向android文件夹，等待一段时间(Android打开项目会首先编译一下).点击运行按钮，这样项目就可以在安卓模拟骑上运行了。
+然后使用Android Studio 打开项目向android文件夹，等待一段时间(Android打开项目会首先编译一下).点击运行按钮，这样项目就可以在安卓模拟器上运行了。
 
 安卓模拟器的菜单快捷键和ios不同
 + ios: command + d
