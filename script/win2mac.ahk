@@ -34,6 +34,9 @@ LCtrl & Space::Send ^{Esc}
 ; Show Web Developer Tools with cmd + alt + i
 #!i::Send {F12}
 
+LCtrl & Left::Send !{Left}
+LCtrl & Right::Send !{right}
+
 #IfWinActive
 
 ;非Google Chrome下
