@@ -26,6 +26,8 @@ return
 
 #If
 
+LCtrl & Space::Send ^{Esc}
+
 ; Google Chrome
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 
