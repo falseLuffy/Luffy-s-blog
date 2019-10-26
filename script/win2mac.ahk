@@ -35,7 +35,7 @@ LCtrl & Space::Send ^{Esc}
 #!i::Send {F12}
 
 LCtrl & Left::Send !{Left}
-LCtrl & Right::Send !{right}
+LCtrl & Right::Send !{Right}
 
 #IfWinActive
 
