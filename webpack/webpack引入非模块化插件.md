@@ -15,4 +15,5 @@
 ```
 import Recorder from 'exports-loader?window.Recorder!../../js/recorder.wav.min.js'
 ```
+
 这是个录音直接输出mp3或wav格式音频的插件，具体该插件的使用我会再写一篇文章来讲述

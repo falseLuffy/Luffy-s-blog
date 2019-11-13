@@ -1,0 +1,12 @@
+# 抽象语法树(AST)初探
+虽然我也不知道啥是AST,也不知道啥是抽象语法树，但是我就是想了解一下，现在时间不够，能力不允许，先留个坑位在这，以待未来完善他
+
+扔几个连接在这，以后有空了再看
+
+[AST抽象语法树——最基础的javascript重点知识，99%的人根本不了解](https://segmentfault.com/a/1190000016231512)
+
+https://juejin.im/post/5bff941e5188254e3b31b424
+
+还有一本我垫桌脚的书，编译原理，可是我他么看不懂啊。
+
+https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API#Node_objects
