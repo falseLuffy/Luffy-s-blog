@@ -7,6 +7,6 @@
 
 https://juejin.im/post/5bff941e5188254e3b31b424
 
-还有一本我垫桌脚的书，编译原理，可是我他么看不懂啊。
+还有一本我垫桌脚的书，《编译原理》，可是我他么看不懂啊。
 
 https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API#Node_objects
