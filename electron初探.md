@@ -13,3 +13,5 @@
 [Electron去掉边框(标题栏)并设定可拖动](https://blog.csdn.net/toubennuhai/article/details/53039612)
 
 [electron Windows和mac 的菜单栏隐藏](https://www.cnblogs.com/wupeng88/p/10510997.html)
+
+[electron 概览](https://juejin.im/post/5cfd2ec7e51d45554877a59f)
