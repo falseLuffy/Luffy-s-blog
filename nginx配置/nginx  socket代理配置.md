@@ -23,7 +23,11 @@
 [root@localhost src]# ./configure  --prefix=/usr/local/nginx --with-stream 
 ```
 
-然后，make，make install。
+然后，make。
+
+```
+make install
+```
 
 
 ## 二、nginx 相关配置
