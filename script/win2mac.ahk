@@ -70,3 +70,18 @@ return
 !c::^c
 
 #IfWinActive
+
+;好像不生效，有空再细看看 查查 :: 在ahk中如何转义
+;在Xshell 窗口下
+#IfWinActive, ahk_exe Xshell.exe
+
+;重定义复制、黏贴快捷键
+^c::return
+
+; 复制
+^c::^Insert
+
+; 黏贴
+^v::+Insert
+return
+#IfWinActive
