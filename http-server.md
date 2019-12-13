@@ -21,4 +21,4 @@ http-server
 http-server --proxy  http://localhost:12354
 
 
-这样只要和你在同一个局域网内，便可以通过http-server暴露的地址直接访问该服务了。
+这样只要和你在同一个局域网内，便可以通过http-server暴露的地址直接访问该服务了
