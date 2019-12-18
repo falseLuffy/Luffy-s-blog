@@ -9,14 +9,14 @@ function mergeBranch () {
     do
         git checkout "$branch"
         git pull 
-        git merge remotes/origin/feature/provincial-procuratorate
+        git merge --no-edit remotes/origin/feature/provincial-procuratorate 
         git push
         echo "合并provincial-procuratorate分支到$branch"
     done
     git checkout "$1"  
 }
 
-cd /e/futureData/fd-vue-wpd
+cd /Users/wy/Documents/future-data/fd-vue-wpd
 branch="`git branch 2>/dev/null | grep "^\*" | sed -e "s/^\*\ //"`"
 echo "当前分支是$branch"
 if test $branch = 'feature/ruixu20191213' ;then 
