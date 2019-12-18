@@ -1,7 +1,7 @@
 function mergeBranch () {
     git checkout feature/provincial-procuratorate
     git pull
-    git merge "$1"
+    git merge --no-edit "$1"
     git push
     echo "合并$1分支到provincial-procuratorate"
 
