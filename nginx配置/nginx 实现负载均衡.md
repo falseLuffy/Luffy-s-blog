@@ -43,7 +43,6 @@ url_hash（第三方）	| url_hash（第三方）
 有如下参数：
 fail_timeout|与max_fails结合使用。
 :-------|:------
-fail_timeout|与max_fails结合使用。
 max_fails	|设置在fail_timeout参数设置的时间内最大失败次数，如果在这个时间内，所有针对该服务器的请求都失败了，那么认为该服务器会被认为是停机了，
 fail_time |	服务器会被认为停机的时间长度,默认为10s。
 backup |	标记该服务器为备用服务器。当主服务器停止时，请求会被发送到它这里。
