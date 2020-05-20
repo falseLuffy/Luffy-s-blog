@@ -12,7 +12,7 @@ function executive () {
 cd /usr/local/nginx/html/fd
 # 参数是否为空
 if [ ! -n "$1" ] ;then
-    file=`find /data/package/web-page/ -mmin -100000 -type f | head -1`
+    file=`find /data/package/web-page/ -mmin -100000 -type f | sort -r | head -1`
     if [ ! -n "$file" ] ;then
         echo '未发现符合条件的文件'
     else 

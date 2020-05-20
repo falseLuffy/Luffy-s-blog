@@ -19,7 +19,7 @@ function mergeBranch () {
 cd /Users/wy/Documents/future-data/fd-vue-wpd
 branch="`git branch 2>/dev/null | grep "^\*" | sed -e "s/^\*\ //"`"
 echo "当前分支是$branch"
-if test $branch = 'feature/ruixu20191213' ;then 
+if test $branch = 'bugfix/ruixu0110' ;then 
     mergeBranch $branch
 else 
     echo '分支错了吧'
