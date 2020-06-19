@@ -1,4 +1,4 @@
-;windows system keymap simular macOS
+﻿;windows system keymap simular macOS
 ; --------------------------------------------------------------
 ; NOTES
 ; --------------------------------------------------------------
@@ -48,6 +48,13 @@ LCtrl & Right::Send !{Right}
     send, {alt up}
 return
 #IfWinNotActive
+
+;如果在webstorm窗口下
+#IfWinActive, ahk_class SunAwtFrame
+^w::Send ^{F4}
+
+#IfWinActive
+
 
 ;如果在git bash窗口下，
 #IfWinActive, ahk_class mintty
