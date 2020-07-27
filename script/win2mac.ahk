@@ -92,3 +92,8 @@ return
 ^v::+Insert
 return
 #IfWinActive
+
+; 限制window自带全角半角切换快捷键
++Space::return
+
+LCtrl & RCtrl::send !Ctrl
