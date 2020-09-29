@@ -2,6 +2,49 @@
 
 [demo](https://github.com/falseLuffy/electron-template)
 
+## electron 安装问题汇总
+无论是node install.js慢还是没有权限等问题
+
+原因是下载[https://github.com/electron/electron/releases/download/v7.0.0/electron-v7.0.0-win32-x64.zip](https://github.com/electron/electron/releases/download/v7.0.0/electron-v7.0.0-win32-x64.zip)的时候很慢, 
+
+或者是
+
+C盘用户\AppData\Local\Temp\electron-download-RHkfjm\electron-v7.0.0-win32-x64.zip
+
+目录没有权限
+
+一、处理权限
+
+打开
+
+C:\\Users\
+
+对当前的用户, 一般是 Administrator 文件夹, 右键->属性, 把只读的勾勾去掉
+
+ 
+
+二、慢的问题
+
+打开
+
+C盘用户\AppData\Roaming\npm\node_modules\electron\node_modules\@electron\get\dist\cjs\GotDownloader.js
+
+download函数可以查看当前路径和下载的url
+
+ 
+
+三、最终解决权限问题
+
+进入目录
+
+C:\Users\Administrator\AppData\Roaming\npm\node_modules\electron
+
+在这个目录下面
+
+node install.js
+
+然后没报错就等，最好整台电脑全局翻墙再运行
+
 [electron打包可选择安装位置，可自动更新](https://blog.csdn.net/weixin_34179762/article/details/88832654)
 
 [Electron 热更新和electron-builder 打包](http://www.weilai.info/rear_end/339.html)
