@@ -7,7 +7,6 @@
 ## 3、设置用户名和密码
 
 ## 4、开启SSH
-
 wsl安装成功后，默认状态SSH 是不开启的，这导致vscode无法连接。 所以需要手动开启SSH 
 
 
@@ -26,7 +25,35 @@ address为127.0.0.1或者localhost，port为22
 ```
 
 ## 5、配置镜像
+将镜像更换为阿里云的镜像
+1. 配置文件备份
+```
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak 
+```
+2.修改配置文件
+```
+sudo vim /etc/apt/sources.list
+```
+将source.list文件内容替换成下面的
 
+```
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+```
+## 6 更新依赖
+执行
+```
+sudo apt-get update  
+sudo apt-get upgrade
+```
 
 ## 7、安装程序
 
