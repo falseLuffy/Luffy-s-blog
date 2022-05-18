@@ -53,3 +53,7 @@ compareit  文件之间的代码比对/与clipboard代码比对
     ]
 }
 ```
+
+如果是在vue中使用less或者sass, css错误提示{ expected css(css-lcurlyexpected)
+查看右下角的语言是不是Vue
+![hell](./vue-config.png)
