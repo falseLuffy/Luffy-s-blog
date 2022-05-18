@@ -31,3 +31,25 @@ compareit  文件之间的代码比对/与clipboard代码比对
 ## 其他插件
 1. open in brower
 
+
+## 支持别名
+ vs code 中路径别名（@）提示和转定义等问题。
+
+> 在项目package.json所在同级目录下创建文件jsconfig.json,写上如下配置。
+
+```
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./",
+        "paths": {
+          "@/*": ["src/*"]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
+```
