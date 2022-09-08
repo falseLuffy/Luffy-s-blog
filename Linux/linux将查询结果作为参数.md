@@ -1,0 +1,1 @@
+[linux 查询结果作为参数](https://www.cnblogs.com/zhangshiwen/p/6030011.html)
