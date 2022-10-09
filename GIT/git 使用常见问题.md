@@ -30,11 +30,13 @@ execSync(GITEnv + ' ' + gitBin + ` clone ${repoAddress} ${target}`);
 
 可以生成一个专门用于 git 操作的 ssh 密钥对，公钥配置到 gitlab 的 用户 ssh key 中，私钥上传到代码仓库中（例如：项目目录的  bin/private 文件中），执行 git 操作时，指定使用此私钥：
 
+```
 const gitBin = resolve(this.appDir, './bin/git');
 const privateKeyFile = resolve(this.appDir, './bin/private');
 const GITEnv = `GIT_SSH_COMMAND="ssh -i ${privateKeyFile}`;
 
 execSync(GITEnv + ' ' + gitBin + ` clone ${repoAddress} ${target}`);
+```
 
 - 私钥密码问题
 
