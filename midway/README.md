@@ -27,7 +27,7 @@ Midway常用装饰器获取路由参数
 |   --  |   -- |
 |@Get|get方法|
 |@Post|post方法|
-|@Delete|delete|
+|@Delete|delete方法|
 |@Put|put方法|
 |@All|全路由|
 |...|
