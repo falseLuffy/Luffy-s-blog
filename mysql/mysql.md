@@ -6,18 +6,17 @@
 - limit 3,5  
 - order by dasc | asc
 - where name = 10  注：和order by 混用时，应在order by之后
-
-|操作符|-说明-|
-| -- | -- |
-| = | 等于|
-| <> | 不等于|
-| != | 不等于|
-| < | 小于|
-| <= | 小于等于|
-| > | 大于|
-| >= | 大于等于|
-| between * and * | 在指定两个值之间|
-| is null | null 值判断|
+    |操作符|-说明-|
+    | -- | -- |
+    | = | 等于|
+    | <> | 不等于|
+    | != | 不等于|
+    | < | 小于|
+    | <= | 小于等于|
+    | > | 大于|
+    | >= | 大于等于|
+    | between * and * | 在指定两个值之间|
+    | is null | null 值判断|
 
 - AND | OR  WHERE age = 1 OR WHERE age = 12
 - 计算次序  ADN优先级高于 OR 可以使用() 括号主动设定优先级
@@ -25,48 +24,45 @@
 - NOT 
 - LIKE 操作副
 - 通配符 
-
-| 通配符 | 说明 |
-|--|--|
-|%| 匹配任意多个任意字符|
-|_(下划线)|一个任意字符|
-
+    | 通配符 | 说明 |
+    |--|--|
+    |%| 匹配任意多个任意字符|
+    |_(下划线)|一个任意字符|
 - 正则表达式  REGEXP  与JavaScript的正则有些许差异。
+    |字符类|说明|
+    |--|--|
+    | [:alnum:]|任意字母和数字(同[a-zA-Z0-9])|
+    | [:alpha:]| 任意字符(同[a-zA-Z])|
+    | [:blank:]|空格和制表(同[\\t])|
+    | [:cntrl:]|ASCII控制字符(ASCII 0到31和127) |
+    | [:digit:]|任意数字(同[0-9])|
+    | [:graph:]| 与[:print:]相同，但不包括空格|
+    | [:lower:]| 任意小写字母(同[a-z])|
+    | [:print:]|任意可打印字符 |
+    | [:punct:]|既不在[:alnum:]又不在[:cntrl:]中的任意字符|
+    | [:space:]|包括空格在内的任意空白字符(同[\\f\\n\\r\\t\\v])|
+    | [:upper:]|任意大写字母(同[A-Z])|
+    | [:xdigit:]|任意十六进制数字(同[a-fA-F0-9])|
+    
+    重复元字符
 
-|字符类|说明|
-|--|--|
-| [:alnum:]|任意字母和数字(同[a-zA-Z0-9])|
-| [:alpha:]| 任意字符(同[a-zA-Z])|
-| [:blank:]|空格和制表(同[\\t])|
-| [:cntrl:]|ASCII控制字符(ASCII 0到31和127) |
-| [:digit:]|任意数字(同[0-9])|
-| [:graph:]| 与[:print:]相同，但不包括空格|
-| [:lower:]| 任意小写字母(同[a-z])|
-| [:print:]|任意可打印字符 |
-| [:punct:]|既不在[:alnum:]又不在[:cntrl:]中的任意字符|
-| [:space:]|包括空格在内的任意空白字符(同[\\f\\n\\r\\t\\v])|
-| [:upper:]|任意大写字母(同[A-Z])|
-| [:xdigit:]|任意十六进制数字(同[a-fA-F0-9])|
+    |元字符|说明|
+    |--|--|
+    |*|0个或多个匹配|
+    |+|1个或多个匹配(等于{1,})|
+    |?|0个或1个匹配(等于{0,1})|
+    |{n}|指定数目的匹配|
+    |{n,}|不少于指定数目的匹配|
+    |{n,m}|匹配数目的范围(m不超过255)|
 
-重复元字符
+    定位符元字符
 
-|元字符|说明|
-|--|--|
-|*|0个或多个匹配|
-|+|1个或多个匹配(等于{1,})|
-|?|0个或1个匹配(等于{0,1})|
-|{n}|指定数目的匹配|
-|{n,}|不少于指定数目的匹配|
-|{n,m}|匹配数目的范围(m不超过255)|
-
-定位符元字符
-
-|元字符|说明|
-|--|--|
-|^|文本的开始|
-|$|文本的结尾|
-|[[:<:]]|词的开始|
-|[[:>:]]|词的结尾|
+    |元字符|说明|
+    |--|--|
+    |^|文本的开始|
+    |$|文本的结尾|
+    |[[:<:]]|词的开始|
+    |[[:>:]]|词的结尾|
    
 
 - 计算字段
@@ -74,13 +70,12 @@
 - 别名 AS
 
 ## 函数
-- 文本处理函数
-- 数值运算函数
-- 处理日期的函数
-- 返回系统信息的函数
+    - 文本处理函数
+    - 数值运算函数
+    - 处理日期的函数
+    - 返回系统信息的函数
 
 ### 文本处理函数
-
 |函数名|说明|
 |--|--|
 |Left|返回串左边的字符|
@@ -166,9 +161,113 @@ SELECT AVG(pro_price) AS avg_price,
 FROM products;
 ```
 
-## 分组数据
+## 分组数据 GROUP BY
 ###  数据分组
 
 ```
 SELECT vend_id, COUNT(*) AS num_prods FROM products GROUP BY vend_id;
 ```
+
+分组和排序的思辨
+
+GROUP BY 和ORDER BY 功能有类似部分，但是两者有很大的差异，要区分使用
+
+SELECT子句顺序
+
+### SELECT子句及其顺序
+
+|子句|说明|是否必须使用|
+|--|--|--|
+|SELECT|要返回的列或表达式|是|
+|FROM   |从中检索数据的表|仅在从表选择数据时使用|
+|WHERE   |行级过滤|否|
+|GROUP BY|分组说明 |仅在按组计算聚集时使用|
+|HAVING| 组级过滤 |否|
+|ORDER BY|输出排序顺序| 否|
+|LIMIT|要检索的行数| 否|
+
+
+### 子查询
+```
+SELECT pro_name FROM products
+    WHERE user_id IN (SELECT user_id FORM users WHERE user_id = 100)
+
+SELECT cust_name, cust_state, (SELECT COUNT(*) FROM orders WHERE orders.cust_id = customers.cust_id) AS orders 
+    FROM customers ORDER BY cust_name
+```
+
+
+## 联结
+为什么要用联结
+
+如何使用联结
+```
+SELECT cust_name, pro_name FROM users, products WHERE users.id = product.user_id
+```
+
+- 内部联结
+- 自联结
+- 自然联结
+- 外部联结
+
+示例：
+```
+//内联结
+//自联结
+//自然联结
+//外部联结
+//联结中使用聚集函数
+```
+
+## 组合查询
+    - UNION
+    - UNION ALL
+    - 排序 ORDER BY  最后一条 SELECT语句使用
+
+```
+SELECT vend_id, prod_id, prod_price FROM products WHERE product_price <= 5
+UNION
+SELECT vend_id, prod_id, prod_price FROM products WHERE vend_id IN (1001, 1002);
+```
+注意： UNION 使用规则 ：
+
+    - 1
+    - 2
+    - 3
+
+
+- INSERT 
+- INSERT SELECT
+
+- UPDATE
+- DELETE 
+注意： 使用时需带着WHERE 否则将更新或删除表中所有数据
+- ALTER TABLE 更新表
+- DROP TABLE
+- RENAME TABLE
+
+
+## 视图
+    - CREATE VIEW
+    - SHOW CREATE VIEW viewname
+    - DROP VIEW
+    - CREATE OR REPLACE VIEW
+### 功能
+    - 简化SQL语句
+    - 复用SQL
+        - 重新格式化数据
+        - 过滤数据
+        - 复用计算字段
+### 视图不能被更新的集中情况, 除了一下几种情况，都可以被更新
+    1、分组
+    2、联结
+    3、子查询
+    4、并
+    5、聚集函数（Min()、Count()、Sum()）
+    6、DISTINCT
+    7、导出（计算）列
+    注： 一般，应该将视图用于检索(SELECT语句) 而不用于更新(INSERT、UPDATE和DELETE)。
+
+
+## 存储过程
+    批量处理的一系列的SQL语句的集合
