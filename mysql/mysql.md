@@ -271,3 +271,121 @@ SELECT vend_id, prod_id, prod_price FROM products WHERE vend_id IN (1001, 1002);
 
 ## 存储过程
     批量处理的一系列的SQL语句的集合
+
+### 为什么使用
+    简单、安全、高效
+    难度大、需要管理员权限
+
+创建存储过程
+
+    CREATE PROCEDURE productProcing() 
+    BEGIN
+        SELECT Avg(prod_price) AS priceaverage
+        FROM  products;
+    END;
+
+调用存储过程
+
+    CALL productProcing()
+    
+删除存储过程
+
+    DROP PROCEDURE productProcing;
+## 游标
+
+    申明-DECLARE
+    打开-OPEN
+    读取- FETCH
+    关闭-CLOSE
+
+## 触发器
+
+使用场景
+    每当增加一个顾客到某个数据库表时，都检查其电话号码格式是 否正确，州的缩写是否为大写;
+    每当订购一个产品时，都从库存数量中减去订购的数量; 
+    无论何时删除一行，都在某个存档表中保留一个副本。
+
+触发器列表
+
+|种类|说明|
+|--|--|
+|INSERT|插入触发器|
+|UPDATE|更新触发器|
+|DELETE |删除触发器|
+
+创建触发器
+```
+CREATE TRIGGER newproduct AFTER INSERT ON products FOR  EACH ROW SELECT 'Product added';
+
+CREATE TRIGGER newproduct AFTER DELETE ON products FOR  EACH ROW SELECT 'Product added';
+
+CREATE TRIGGER newproduct AFTER UPDATE ON products FOR  EACH ROW SELECT 'Product added';
+
+```
+删除触发器
+```
+DELETE TRIGGER newproduct;
+```
+
+## 事务处理
+
+    可以用来维护数据库的完整性，它 保证成批的MySQL操作要么完全执行，要么完全不执行。
+
+```
+START TRANSACTION
+DELETE FROM orderitems WHERE order_num = 20010;
+DELETE FROM orders WHERE order_num = 20010;
+COMMIT
+```
+
+保留点
+```
+SAVEPOINT delete1;
+ROLLBACK TO delete1;
+```
+
+更改默认的提交行为
+```
+SET autocommit=0;
+```
+
+## 字符集管理
+
+## 安全和用户管理
+
+## 数据库维护
+### 备份数据
+|名称|说明|
+|--|--|
+|mysqldump|转储所有数据库内容到某个外部 文件|
+|mysqlhotcopy|从一个数据库复制所有数据|
+|BACKUP TABLE|转储所 有数据到某个外部文件|
+|SELECT INTO OUTFILE|转储所 有数据到某个外部文件|
+|FLUSH TABLES|刷新数据库，确保当前无缓存数据|
+### 数据库维护
+
+|名称|说明|
+|--|--|
+|ANALYZE TABLE||
+|CHECK TABLE||
+
+### 问题诊断
+mysqld
+
+### 日志文件管理
+
+|日志种类|说明|
+|--|--|
+|错误日志|hostname.err 它包含启动和关闭问题以及任意关键错误的细节|
+|查询日志|hostname.log 记录所有MySQL活动，在诊断问题时非常有用|
+|二进制日志|hostname-bin 它记录更新过数据(或者可能更新过数据)的所有 语句|
+|缓慢查询日志| hostname-slow.log 此日志记录执行缓慢的任何查询|
+
+## 数据格式
+
+|数据类型|说明|
+|--|--|
+|串数据类型||
+|数值数据类型||
+|日期和时间数据类型||
+|二进制数据类型||
