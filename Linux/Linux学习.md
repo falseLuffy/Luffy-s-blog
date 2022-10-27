@@ -18,9 +18,9 @@
 
 示例：
 ```
-drwxr-xr-x  12 banma-2593  staff   384 10 21 18:18 .git
+drwxr-xr-x  12 root  staff   384 10 21 18:18 .git
 ```
-|drwxr-xr-x|12| anma-2593|staff|384|10 21 18:18|.git
+|drwxr-xr-x|12|root|staff|384|10 21 18:18|.git
 |--|--|--|--|--|--|--|
 |档案类型权限|连接数|档案拥有者|档案所在群组| 档案容量 | 档案最后修改时间 | 档案名称 | 
 
