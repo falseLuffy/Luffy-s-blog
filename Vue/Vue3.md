@@ -22,5 +22,14 @@ vite
 |构造函数| 否| 是|
 |插槽|slot="name"|#name|
 
+## vue3 typescript JSX  组件开发及使用
+
+prop 类型推导 PropType
+
+
+### 函数组件 
+    vue3 函数组件是无状态的，
+    在jsx中使用函数组件是请使用如果时根组件请使用<></>包裹，否则函数组件将混淆父组件的props。
+
 
 
