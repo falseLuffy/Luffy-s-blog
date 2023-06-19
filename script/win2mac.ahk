@@ -6,25 +6,30 @@
 ; ^ = CTRL
 ; + = SHIFT
 ; # = WIN
-
+; --------------------------------------------------------------
 ; Remap Ctrl + Tab to Alt + Tab. And
 ; Remap Ctrl + Shift + Tab to Alt +Shift + Tab.
-LCtrl & Tab:: 
-    AltTabMenu := true
-    If GetKeyState("Shift","P")
-        Send {Alt Down}{Shift Down}{Tab}
-    else
-        Send {Alt Down}{Tab}
+; LCtrl & Tab::
+;     AltTabMenu := true
+;     If GetKeyState("Shift","P")
+;         Send {Alt Down}{Shift Down}{Tab}
+;     else
+;         Send {Alt Down}{Tab}
+; return
+
+; #If (AltTabMenu)
+;     ~*LCtrl Up::
+;         Send {Shift Up}{Alt Up}
+;         AltTabMenu := false
+;     return
+
+; #If
+^Tab::
+Send {Alt down}{Tab}
+Keywait Control
+Send {Alt up}
 return
-
-#If (AltTabMenu)
-
-    ~*LCtrl Up::
-        Send {Shift Up}{Alt Up}
-        AltTabMenu := false 
-    return
-
-#If
+; --------------------------------------------------------------
 
 LCtrl & Space::Send ^{Esc}
 
